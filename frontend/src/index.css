@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slate-100 font-sans;
+    background-color: #060b13;
+    background-image: 
+      radial-gradient(ellipse 85% 60% at 50% -10%, rgba(14, 165, 233, 0.18), transparent),
+      radial-gradient(circle at 100% 100%, rgba(2, 132, 199, 0.08), transparent 40%),
+      radial-gradient(circle at 0% 50%, rgba(56, 189, 248, 0.05), transparent 30%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060b13;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(11, 20, 36, 0.80);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+.glass-card {
+  background: rgba(15, 26, 46, 0.60);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(56, 189, 248, 0.10);
+}
+
+.glow-sky {
+  box-shadow: 0 0 25px -4px rgba(14, 165, 233, 0.35);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
+}
+
+/* Markdown styling inside final report */
+.markdown-body {
+  line-height: 1.7;
+}
+
+.markdown-body h1 {
+  @apply text-2xl font-bold text-slate-100 mt-6 mb-3 border-b border-slate-800 pb-2;
+}
+
+.markdown-body h2 {
+  @apply text-xl font-semibold text-slate-200 mt-5 mb-2;
+}
+
+.markdown-body h3 {
+  @apply text-lg font-medium text-slate-300 mt-4 mb-2;
+}
+
+.markdown-body p {
+  @apply text-slate-300 mb-4 leading-relaxed;
+}
+
+.markdown-body ul {
+  @apply list-disc list-inside space-y-1 mb-4 text-slate-300;
+}
+
+.markdown-body ol {
+  @apply list-decimal list-inside space-y-1 mb-4 text-slate-300;
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-sky-500 pl-4 py-1 italic text-slate-400 bg-sky-950/20 rounded-r my-4;
+}

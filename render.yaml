@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: ai-research-analyst-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: SEARCH_PROVIDER
+        value: duckduckgo
+      - key: MAX_RESEARCH_LOOPS
+        value: 4
+      - key: DATABASE_URL
+        value: sqlite:///./research.db
