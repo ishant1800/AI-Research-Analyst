@@ -273,7 +273,7 @@ AI-Research-Analyst/
    - `SEARCH_PROVIDER`: `duckduckgo`
    - `MAX_RESEARCH_LOOPS`: `4`
 5. Click **Deploy Web Service**.
-6. Once deployed, copy your Render service URL (e.g., `https://ai-research-analyst-api.onrender.com`).
+6. Once deployed, copy your Render service URL (e.g., `https://ai-research-analyst-ae81.onrender.com`).
 
 ---
 
@@ -286,7 +286,7 @@ AI-Research-Analyst/
    - **Build Command**: `npm run build`
    - **Output Directory**: `dist`
 4. In **Environment Variables**, add:
-   - `VITE_API_BASE_URL`: `https://your-render-service-name.onrender.com` (your Render backend URL from Step 1)
+   - `VITE_API_BASE_URL`: `https://ai-research-analyst-ae81.onrender.com`
 5. Click **Deploy**.
 6. Vercel will build and launch your production dashboard.
 
